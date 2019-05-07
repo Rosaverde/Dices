@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">DICES</string>
+    <string name="text_RollButton">ROLL DICES</string>
+    <string name="text_HoldButton">HOLD</string>
+    <string name="text_NewGameButton">NEW GAME</string>
+    <string name="text_Player1">PLAYER 1</string>
+    <string name="text_Player2">PLAYER 2</string>
+    <string name="text_Current">CURRENT</string>
+    <string name="text_CurrentScore1">0</string>
+    <string name="text_CurrentScore2">0</string>
+    <string name="text_PlayerScore1">0</string>
+    <string name="text_PlayerScore2">0</string>
+
 </resources>
