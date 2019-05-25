@@ -38,14 +38,13 @@
         android:textColor="@android:color/black"
         android:textSize="38sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView_scorePlayer1"
+        app:layout_constraintBottom_toTopOf="@+id/textView_RoundScorePlayer1"
         app:layout_constraintEnd_toStartOf="@+id/textView_player2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_scorePlayer1"
+        android:id="@+id/textView_RoundScorePlayer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -54,7 +53,7 @@
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/image-leftDice"
-        app:layout_constraintEnd_toStartOf="@+id/textView_scorePlayer2"
+        app:layout_constraintEnd_toStartOf="@+id/textView_RoundScorePlayer2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_player1" />
 
@@ -72,14 +71,14 @@
         android:textColor="@android:color/black"
         android:textSize="38sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView_scorePlayer2"
+        app:layout_constraintBottom_toTopOf="@+id/textView_RoundScorePlayer2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView_player1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.49" />
 
     <TextView
-        android:id="@+id/textView_scorePlayer2"
+        android:id="@+id/textView_RoundScorePlayer2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -89,7 +88,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/image_rightDice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_scorePlayer1"
+        app:layout_constraintStart_toEndOf="@+id/textView_RoundScorePlayer1"
         app:layout_constraintTop_toBottomOf="@+id/textView_player2" />
 
 
@@ -101,7 +100,7 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toStartOf="@+id/image_rightDice"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_scorePlayer1"
+        app:layout_constraintTop_toBottomOf="@+id/textView_RoundScorePlayer1"
         app:srcCompat="@drawable/dice6" />
 
     <ImageView
@@ -112,7 +111,7 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image-leftDice"
-        app:layout_constraintTop_toBottomOf="@+id/textView_scorePlayer2"
+        app:layout_constraintTop_toBottomOf="@+id/textView_RoundScorePlayer2"
         app:srcCompat="@drawable/dice6" />
 
 
