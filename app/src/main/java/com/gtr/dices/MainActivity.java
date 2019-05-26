@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
     TextView mPlayer2_ScoreTextView;
     TextView mPlayer1_RoundScore;
     TextView mPlayer2_RoundScore;
-    int scoresP1 = 0;
-    int scoresP2 = 0;
+    int scoresP1;
+    int scoresP2;
     int roundScores;
-    int activePlayer = 0;
+    int activePlayer;
 
     final int[] diceArray = {R.drawable.dice1,
             R.drawable.dice2,
@@ -41,6 +41,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if(savedInstanceState != null)
+        {
+            scoresP1 = savedInstanceState.getInt("Player1ScoreKey");
+            scoresP2 = savedInstanceState.getInt("Player2ScoreKey");
+            roundScores = savedInstanceState.getInt("RoundScoreKey");
+            activePlayer = savedInstanceState.getInt("ActivePlayerKey");
+        }
+        else
+        {
+            scoresP1 = 0;
+            scoresP2 = 0;
+            roundScores = 0;
+            activePlayer = 0;
+        }
 
         newGameButton = findViewById(R.id.button_NewGame);
         rollButton  = findViewById(R.id.button_Roll);
@@ -53,8 +67,14 @@ public class MainActivity extends AppCompatActivity {
         leftDice = findViewById(R.id.image_leftDice);
         rightDice = findViewById(R.id.image_rightDice);
 
+        mPlayer1_RoundScore.setText(Integer.toString(scoresP1));
+        mPlayer2_RoundScore.setText(Integer.toString(scoresP2));
 
-
+        if(activePlayer == 0) {
+            mPlayer1_ScoreTextView.setText(Integer.toString(roundScores));
+        } else {
+            mPlayer2_ScoreTextView.setText(Integer.toString(roundScores));
+        }
 
         rollButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -170,4 +190,15 @@ public class MainActivity extends AppCompatActivity {
         leftDice.setImageResource(diceArray[5]);
         rightDice.setImageResource(diceArray[5]);
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putInt("RoundScoreKey", roundScores);
+        outState.putInt("Player1ScoreKey", scoresP1);
+        outState.putInt("Player2ScoreKey", scoresP2);
+        outState.putInt("ActivePlayerKey", activePlayer);
+    }
 }
+
